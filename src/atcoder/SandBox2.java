@@ -1,4 +1,4 @@
-package com.sandbox.java;
+package atcoder;
 
 class SandBox2 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.sandbox.java;
+package atcoder;
 
 import java.util.Scanner;
 
