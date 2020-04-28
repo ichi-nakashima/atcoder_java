@@ -2,7 +2,7 @@ package atcoder;
 
 import java.util.Scanner;
 
-class Beginner164A {
+class ABC164A {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int S = Integer.parseInt(sc.next());
