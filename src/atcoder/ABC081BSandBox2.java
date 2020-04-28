@@ -2,8 +2,9 @@ package atcoder;
 
 import java.util.Scanner;
 
-class ABC081BSandBox {
+class ABC081BSandBox2 {
     public static void main(String[] args) {
+        int inf = 1000000;// 十分大きな値
         Scanner sc = new Scanner(System.in);
         int N = Integer.parseInt(sc.next());
         int[] nums = new int[N];
@@ -11,18 +12,19 @@ class ABC081BSandBox {
             nums[i] = Integer.parseInt(sc.next());
         }
 
-        int result = 0;
-        boolean flag = true;
-        do {
-            for (int i = 0; i < N; i++) {
-                if (nums[i] % 2 != 0) {
-                    flag = false;
-                    break;
-                }
+        int result = inf;
+        for (int i = 0; i < N; i++) {
+            int count = 0;
+
+            while (true) {
+                if (nums[i] % 2 != 0) break;
                 nums[i] /= 2;
+                count++;
             }
-            if (flag) result++;
-        } while (flag);
+
+            if (result > count) result = count;
+        }
+
         System.out.print(result);
     }
 }
