@@ -2,15 +2,18 @@ package atcoder;
 
 import java.util.Scanner;
 
-public class Main {
+public class ABC146BSandBox {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = Integer.parseInt(sc.next());
-        char[] S = sc.next().toCharArray();
-        int r = 0;
-        for (int i = 0; i < N - 2; i++) {
-            // i 番目から連なる３つの文字列について検定する。N-2までの i を調査すれば全て調べ終わる。
-            if (S[i] == 'A' && S[i+1] == 'B' && S[i+2] == 'C') r++;
+        String SList = sc.next();
+        String r = "";
+        for (char s:
+             SList.toCharArray()) {// String は toCharArray() で char に変換できる。
+            s += N;
+            // char を数値として使う。例えば、'A' なら 66。B=67,C=68...
+            if ('Z' < s) s -= 26;
+            r += (char)(s);
         }
         System.out.println(r);
     }

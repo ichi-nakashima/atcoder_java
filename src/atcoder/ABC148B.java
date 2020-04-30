@@ -2,15 +2,16 @@ package atcoder;
 
 import java.util.Scanner;
 
-public class Main {
+public class ABC148B {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = Integer.parseInt(sc.next());
-        char[] S = sc.next().toCharArray();
-        int r = 0;
-        for (int i = 0; i < N - 2; i++) {
-            // i 番目から連なる３つの文字列について検定する。N-2までの i を調査すれば全て調べ終わる。
-            if (S[i] == 'A' && S[i+1] == 'B' && S[i+2] == 'C') r++;
+        String[] SList = sc.next().split("");
+        String[] TList = sc.next().split("");
+        String r = "";
+        for (int i = 0; i < N; i++) {
+            r += SList[i];
+            r += TList[i];
         }
         System.out.println(r);
     }
