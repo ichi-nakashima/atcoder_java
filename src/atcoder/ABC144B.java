@@ -2,15 +2,14 @@ package atcoder;
 
 import java.util.Scanner;
 
-public class Main {
+public class ABC144B {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = Integer.parseInt(sc.next());
         String r = "No";
         for (int i = 1; i <= 9; i++) {
-            if (N % i == 0 && N / i <= 9) {
-                r = "Yes";
-                break;
+            for (int j = 1; j <= 9; j++) {
+                if(N == i * j) r = "Yes";
             }
         }
         System.out.println(r);
