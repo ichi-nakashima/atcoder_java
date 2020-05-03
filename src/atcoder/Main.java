@@ -6,33 +6,19 @@ import java.util.NoSuchElementException;
 public class Main {
     public static void main(String[] args) {
         FastScanner sc = new FastScanner();
-        int N = Integer.parseInt(sc.next());
-        int M = Integer.parseInt(sc.next());
-        int Q = Integer.parseInt(sc.next());
-
-        int[][] l = new int[Q][4];
-        for (int i = 0; i < Q; i++) {
-            l[i][0] += Integer.parseInt(sc.next());
-            l[i][1] += Integer.parseInt(sc.next());
-            l[i][2] += Integer.parseInt(sc.next());
-            l[i][3] += Integer.parseInt(sc.next());
+        int X = Integer.parseInt(sc.next());
+        for (int i = 0; i < 100000; i++) {
+            boolean fin = false;
+            for (int j = -100000; j <= 0; j++) {
+                int x = (i+j)*(i-j)*(i+j)*((int) Math.pow(i, 2) - i*j +(int) Math.pow(j, 2))+(int) Math.pow(i, 2)*(int) Math.pow(j, 2) *(i-j);
+                if (X == x) {
+                    System.out.println(i + " " + j);
+                    fin = true;
+                    break;
+                }
+            }
+            if (fin) break;
         }
-
-        int[] A = new int[N];
-        int[] ike = new int[M];
-        for (int i = 1; i <= M; i++) {
-            ike[i-1] = i;
-        }
-
-
-        int score = 0;
-        for (int i = 0; i < Q; i++) {
-            if ((l[i][1] - l[i][0]) == l[i][2]) score += l[i][3];
-        }
-
-
-
-        System.out.println();
     }
 }
 
