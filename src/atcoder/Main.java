@@ -7,11 +7,10 @@ public class Main {
     public static void main(String[] args) {
         FastScanner sc = new FastScanner();
         int X = Integer.parseInt(sc.next());
-        for (int i = 0; i < 100000; i++) {
+        for (int i = -118; i < 199; i++) {
             boolean fin = false;
-            for (int j = -100000; j <= 0; j++) {
-                int x = (i+j)*(i-j)*(i+j)*((int) Math.pow(i, 2) - i*j +(int) Math.pow(j, 2))+(int) Math.pow(i, 2)*(int) Math.pow(j, 2) *(i-j);
-                if (X == x) {
+            for (int j = -119; j <= 118; j++) {
+                if (X == Math.pow(i, 5) - Math.pow(j, 5)) {
                     System.out.println(i + " " + j);
                     fin = true;
                     break;

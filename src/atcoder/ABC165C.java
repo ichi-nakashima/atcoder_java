@@ -1,7 +1,5 @@
 package atcoder;
 
-import java.io.IOException;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class ABC165C {
@@ -25,13 +23,10 @@ public class ABC165C {
             ike[i-1] = i;
         }
 
-
         int score = 0;
         for (int i = 0; i < Q; i++) {
             if ((l[i][1] - l[i][0]) == l[i][2]) score += l[i][3];
         }
-
-
 
         System.out.println();
     }
