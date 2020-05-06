@@ -1,28 +1,21 @@
 package atcoder;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class Main {
+public class ABC120B {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<String> S = new LinkedList(Arrays.asList(sc.next().split("")));
-        String pre = "";
-        int i = 0;
-        int r = 0;
-        while (true) {
-            if (i == 0) {
-                pre = S.get(i);
-            } else if (!pre.equals(S.get(i))) {
-                S.remove(i);
-                S.remove(i - 1);
-                i = 0;
-                pre = "0";
-                r += 2;
-            }
-            if (i == S.size() - 1 || S.size() == 0) break;
-            i++;
+        int A = Integer.parseInt(sc.next());
+        int B = Integer.parseInt(sc.next());
+        int K = Integer.parseInt(sc.next());
+        int len = (A < B) ? A : B;
+        List r = new ArrayList<Integer>();
+        for (int i = 1; i <= len; i++) {
+            if (A % i == 0 && B % i == 0) r.add(i);
         }
-        System.out.println(r);
+        System.out.println(r.get(r.size()-K));
     }
 }
 
