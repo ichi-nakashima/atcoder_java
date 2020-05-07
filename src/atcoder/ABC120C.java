@@ -1,14 +1,15 @@
 package atcoder;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class Main {
+public class ABC120C {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String S = sc.next();
         int sLen = S.length();
         int oneLen = S.replaceAll("0", "").length();
         int zeroLen = sLen - oneLen;
+        // 問題文によると、min(0の数, 1の数)　回数だけ、数値を消すことができるので以下
         int r = Math.min(zeroLen, oneLen) * 2;
         System.out.println(r);
     }
