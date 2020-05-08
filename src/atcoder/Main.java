@@ -5,12 +5,16 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String S = sc.next();
-        int sLen = S.length();
-        int oneLen = S.replaceAll("0", "").length();
-        int zeroLen = sLen - oneLen;
-        int r = Math.min(zeroLen, oneLen) * 2;
-        System.out.println(r);
+        long N = Long.parseLong(sc.next());
+        long r = Long.MAX_VALUE;
+        for (long a = 1; a <= N; a++) {
+            if (N % a == 0) {
+                long b = N / a;
+                long m = Math.max(a, b);
+                if (m < r) r = m;
+            }
+        }
+        System.out.println(String.valueOf(r).length());
     }
 }
 
