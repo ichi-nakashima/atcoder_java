@@ -5,10 +5,18 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] a = sc.next().split(",");
-        int [] A = new int[a.length];
-        for (int i = 0; i < a.length; i++) {
-            A[i] = Integer.parseInt(a[i]);
+        int S = Integer.parseInt(sc.next());
+        int P = Integer.parseInt(sc.next());
+        int max = 0;
+        for (int i = 1; i <= P; i++) {
+            int X = S;
+            int q = P;
+            for (int j = i; j > 0; j--) {
+                X = (j==1) ? X * (100 + q) / 100 : X * (100 + 1) / 100;
+                q--;
+            }
+            max = Math.max(max, X);
         }
+        System.out.println(max);
     }
 }

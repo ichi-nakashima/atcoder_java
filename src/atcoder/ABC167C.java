@@ -1,8 +1,5 @@
 package atcoder;
 
-
-import java.io.IOException;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class ABC167C {
