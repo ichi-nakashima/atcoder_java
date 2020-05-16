@@ -5,18 +5,25 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int S = Integer.parseInt(sc.next());
-        int P = Integer.parseInt(sc.next());
-        int max = 0;
-        for (int i = 1; i <= P; i++) {
-            int X = S;
-            int q = P;
-            for (int j = i; j > 0; j--) {
-                X = (j==1) ? X * (100 + q) / 100 : X * (100 + 1) / 100;
-                q--;
-            }
-            max = Math.max(max, X);
+        int A = Integer.parseInt(sc.next());
+        int B = Integer.parseInt(sc.next());
+        int C = Integer.parseInt(sc.next());
+        int X = Integer.parseInt(sc.next());
+        int Y = Integer.parseInt(sc.next());
+
+        int result = 0;
+        int ave = (A + B) / 2;
+        if (ave > C) {
+            int minNum = Math.min(X, Y);
+            if (minNum % 2 != 0) minNum--;
+
+            result += C * minNum * 2;
+            result += A * (X - minNum);
+            result += B * (Y - minNum);
+        } else {
+            result += A * X;
+            result += B * Y;
         }
-        System.out.println(max);
+        System.out.println(result);
     }
 }
