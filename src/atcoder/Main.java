@@ -11,18 +11,10 @@ public class Main {
         int X = Integer.parseInt(sc.next());
         int Y = Integer.parseInt(sc.next());
 
-        int result = 0;
-        int ave = (A + B) / 2;
-        if (ave > C) {
-            int minNum = Math.min(X, Y);
-            if (minNum % 2 != 0) minNum--;
+        int result = 100000 * 5000 * 2;
+        for (int i = 0; i <= 100000; i++) {
+            result = Math.min(result, i * 2 * C + Math.max(0, X - i) * A + Math.max(0, Y - i) * B);
 
-            result += C * minNum * 2;
-            result += A * (X - minNum);
-            result += B * (Y - minNum);
-        } else {
-            result += A * X;
-            result += B * Y;
         }
         System.out.println(result);
     }
