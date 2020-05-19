@@ -9,7 +9,5 @@ public class Main {
         int B = Integer.parseInt(sc.next());
         int H = Integer.parseInt(sc.next());
         int M = Integer.parseInt(sc.next());
-        H * 30;
-        M * 6;
     }
 }
