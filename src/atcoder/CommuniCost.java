@@ -1,8 +1,8 @@
 package atcoder;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class Main {
+public class CommuniCost {
     static final int tableA[][] = {{1,2,3,4},{5,6,7,8}};
     static final int tableB[][] = {{9,10},{-1,11}};
     static final int tableC[][] = {{12,13,-1,14,15},{16,17,18,19,20}};
