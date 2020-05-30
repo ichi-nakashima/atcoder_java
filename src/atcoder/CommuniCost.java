@@ -3,9 +3,12 @@ package atcoder;
 import java.util.Scanner;
 
 public class CommuniCost {
-    static final int tableA[][] = {{1,2,3,4},{5,6,7,8}};
-    static final int tableB[][] = {{9,10},{-1,11}};
-    static final int tableC[][] = {{12,13,-1,14,15},{16,17,18,19,20}};
+//    static final int tableA[][] = {{1,2,3,4},{5,6,7,8}};
+//    static final int tableB[][] = {{9,10},{-1,11}};
+//    static final int tableC[][] = {{12,13,-1,14,15},{16,17,18,19,20}};
+    static final int tableA[][] = {{4,13,1,16},{8,15,17,19}};
+    static final int tableB[][] = {{12,7},{-1,-1}};
+    static final int tableC[][] = {{10,18,2,20,5},{3,6,11,9,14}};
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
